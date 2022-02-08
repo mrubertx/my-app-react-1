@@ -1,5 +1,6 @@
 import React from "react";
 import {Container, Navbar, NavDropdown, Nav, Form, FormControl,} from "react-bootstrap"
+import CartWidget from "../CartWidget/CartWidget";
 
 export default function (){
         return (
@@ -25,6 +26,7 @@ export default function (){
             <Nav.Link href="#action6">Merchandising</Nav.Link>
             <Nav.Link href="#action7">Contactanos</Nav.Link>
           </Nav>
+          <CartWidget/>
           <Form className="d-flex">
             <FormControl
               type="search"
