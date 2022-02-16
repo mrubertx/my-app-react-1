@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Navbar, NavDropdown, Nav, Form, FormControl,} from "react-bootstrap"
+import {Container, Navbar, NavDropdown, Nav, Form, FormControl,} from "react-bootstrap";
 import CartWidget from "../CartWidget/CartWidget";
 
 export default function (){
