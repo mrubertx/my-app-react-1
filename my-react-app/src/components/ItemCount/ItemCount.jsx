@@ -20,8 +20,8 @@ const ItemCount = ({maximo, inicial}) =>{
     return(
         <div>
             <h1>{value}</h1>
-            <button onClick={handleSuma}>+</button>
             <button onClick={handleResta}>-</button>
+            <button onClick={handleSuma}>+</button>
         </div>
     )
 }
