@@ -3,11 +3,6 @@ import ItemCount from '../ItemCount/ItemCount'
 
 export const ItemDetail= ({item}) => {
 
-   function onAdd(quantityToAdd) {
-       if(item.stock) {
-           console.log(`Agregar al cart el ${item.id} con cantidad: ${quantityToAdd}´);
-       }
-   }
 
   return (
     <div>
