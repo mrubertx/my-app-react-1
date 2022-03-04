@@ -2,12 +2,17 @@ import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 
 export const ItemDetail= ({item}) => {
-  const inicial = 1
-  const maximo = 10 
+
+   function onAdd(quantityToAdd) {
+       if(item.stock) {
+           console.log(`Agregar al cart el ${item.id} con cantidad: ${quantityToAdd}´);
+       }
+   }
+
   return (
     <div>
         <div className="col-md-4">
-                  <div className="card w-100 mt-5">
+                  <div className="card w-100 mt-4">
                       <div className="card-body">
                           <img src={item.foto} alt="" className="w-50"/>
                       </div>
@@ -15,13 +20,11 @@ export const ItemDetail= ({item}) => {
                           <h3>{`${item.name}`}</h3>
                       </div>
                       <h2>${item.price}</h2>
-                      <ItemCount inicial={inicial} maximo={maximo}/>
-                      <h5>{item.descripcion}</h5>
-                      <div className="card-footer">
-                          <button className="btn btn-outline-primary brn-block">
+                      <h5>Cantidad:</h5><ItemCount inicial={1} maximo={item.stock}/><h5>(Stock disponible:{item.stock})</h5>
+                      <h7>Descripcion: {item.descripcion}</h7>
+                          <button className="btn btn-dark brn-block">
                               COMPRAR
                           </button>
-                      </div>
                   </div>
               </div>
     </div>
