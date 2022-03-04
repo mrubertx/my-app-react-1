@@ -11,21 +11,16 @@ const item=[
     { id: 4, foto: "https://res.cloudinary.com/mrubertx/image/upload/v1640184428/dinastia_m_330x500_qpmupl.png", categoria: "marvel", name: "DINASTIA M", price: 700,descripcion: "Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos, sociosqu purus eros sollicitudin id euismod odio tempor ad, magnis convallis lacinia metus lectus sapien phasellus. Etiam fames sem odio leo duis hendrerit venenatis conubia senectus nec posuere imperdiet litora pellentesque, suspendisse nibh ullamcorper placerat fusce non quisque scelerisque eu magna vel tempor molestie. Taciti proin pretium semper porta eros fusce sem, nunc blandit turpis enim luctus morbi, curabitur quisque inceptos feugiat diam mattis." ,stock:3},
 ];
 
-const getProductos = (detail) =>{
-    console.log(detail);
-    let error = false;
+const getProductos = (idBuscar) =>{
     return new Promise((resolve, reject) =>{
         setTimeout(() => {
-        if(item===undefined){
+        if(idBuscar===undefined){
             resolve(item);
         } else{
-            let filtro = item.filter((err) => err.detail ===detail);
-            resolve(filtro)
+            let filtro = item.find((unItem) => unItem.id ===Number(idBuscar));
+            filtro?resolve(filtro):reject("error en la promesa")
         }
-        }, 2000);
-        if (error) {
-            reject (new error("error en la promesa"));
-        }
+        }, 500);
     });
 };
 
