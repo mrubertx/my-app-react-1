@@ -9,7 +9,7 @@ const NavBar =() => {
       <Navbar bg="dark" variant="dark">
         <Container>
            <Navbar.Brand>COMIC STORE</Navbar.Brand>
-              <Nav className="nav-item">
+              <Nav className="me-auto">
                 <NavLink className="nav-link text-light" to={"/"}>Inicio</NavLink>
                 <NavLink className="nav-link text-light" to={"/category/marvel"}>Marvel</NavLink>
                 <NavLink className="nav-link text-light" to={"/category/dccomics"}>DC Comics</NavLink>
